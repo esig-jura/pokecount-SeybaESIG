@@ -23,15 +23,20 @@ let liste = []
 // Texte qui affiche les captures sauvegardées
 const sauvegardeEl = document.getElementById("sauvegarde-el");
 
-// Boutons pour capturer, sauvegarder et réinitialiser
+// Boutons pour capturer, sauvegarder, réinitialiser et supprimer
 const capturerBtn = document.getElementById("capturer-btn");
 const sauvegarderBtn = document.getElementById("sauvegarder-btn");
 const resetBtn = document.getElementById("reset-btn");
+const supprimerBtn = document.getElementById("supprimer-btn");
+
+// Champ de saisie pour le numéro de la capture à supprimer
+const numCapture = document.getElementById("numCapture");
 
 // Ajouter un écouteur d'événement pour les boutons
 capturerBtn.addEventListener("click", capturer);
 sauvegarderBtn.addEventListener("click", sauvegarder);
 resetBtn.addEventListener("click", reset);
+
 
 
 /**
@@ -107,3 +112,17 @@ function afficherListe() {
         listeEl.appendChild(li); // Ajouter l'élément <li> à la liste <ol>
     });
 }
+
+
+/**
+ * Fonction pour supprimer une capture
+ * @returns {void}
+ * @since 2025-01-29
+ * @version 1.0
+ */
+supprimerBtn.addEventListener("click", () => {
+    let index = numCapture.value - 1;
+    liste.splice(index, 1);
+    localStorage.setItem("key", JSON.stringify(liste));
+    afficherListe();
+});
