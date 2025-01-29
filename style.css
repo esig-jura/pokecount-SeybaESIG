@@ -37,3 +37,12 @@ button {
 #sauvegarder-btn {
     background: #7AC74C;
 }
+
+#reset-btn {
+    background: darkblue;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}

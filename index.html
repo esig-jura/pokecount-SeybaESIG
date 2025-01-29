@@ -9,8 +9,19 @@
 <body>
 <h1>Pokémon capturés</h1>
 <h2 id="compteur-el">0</h2>
-<button id="capturer-btn" onclick="capturer()">CAPTURER</button>
-<button id="sauvegarder-btn" onclick="sauvegarder()">SAUVEGARDER</button>
-<p id="sauvegarde-el">Mes captures : </p>
+<button id="capturer-btn">CAPTURER</button>
+<button id="sauvegarder-btn">SAUVEGARDER</button>
+<button id="reset-btn">RESET</button>
+<p id="sauvegarde-el">Mes captures</p>
+<ul id="listeOrdonnee">
+</ul>
+
+<form id="form">
+    <label for="numCapture">Num de capture: </label>
+    <input type="text" id="numCapture">
+    <button id="ajouter-btn">Supprimer</button>
+</form>
+<script src="script.js"></script>
 </body>
+
 </html>
