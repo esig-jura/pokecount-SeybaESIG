@@ -94,6 +94,9 @@ window.addEventListener("load", () => { // Attendre que la page soit chargée po
 function reset() {
     localStorage.removeItem("captures"); // Supprimer les captures sauvegardées
     localStorage.removeItem("key");
+    compteurEl.style.color = "black"; // Couleur noire pour le compteur réinitialisé
+    compteur = 0; // Réinitialiser le compteur
+    compteurEl.textContent = compteur; // Mettre à jour le texte de l'élément <h2>
     liste = [];
     afficherListe();
 }
